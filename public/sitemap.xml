@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: confirm production domain, and add new /work/:slug entries when portfolioItems changes -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://mindsynk.tech/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mindsynk.tech/services</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mindsynk.tech/pricing</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mindsynk.tech/work</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mindsynk.tech/work/medialert</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mindsynk.tech/work/pezahome</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mindsynk.tech/work/unisacco</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mindsynk.tech/about</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mindsynk.tech/contact</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>

@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Code2, Cloud, Megaphone } from "lucide-react";
+import { Code2, Network, Megaphone, Palette } from "lucide-react";
 
 export interface Service {
   slug: string;
@@ -14,28 +14,37 @@ export const services: Service[] = [
   {
     slug: "software-mobile-development",
     title: "Software & Mobile Development",
-    description: "Custom web and mobile applications built for real-world African businesses.",
+    description: "Full-lifecycle web and mobile applications, built and supported end to end.",
     detail:
-      "We design and build custom software, web platforms, and mobile apps tailored to your operations — from customer-facing products to internal tools that streamline how your team works.",
+      "Full-lifecycle design, development, and maintenance of web and mobile applications — from initial concept through deployment and ongoing support. Built on React, Next.js, Python/Django, and Node.js, with mobile delivery capability including offline-first approaches (demonstrated in the MediAlert project) suited to Malawi's variable connectivity.",
     icon: Code2,
-    tags: ["React", "React Native", "Node.js", "TypeScript", "Firebase"],
+    tags: ["React", "Next.js", "Python/Django", "Node.js", "Offline-first"],
   },
   {
-    slug: "cloud-it-consultancy",
-    title: "Cloud & IT Consultancy",
-    description: "Reliable infrastructure, cloud migration, and IT strategy that scales with you.",
+    slug: "it-consultancy-networking",
+    title: "IT Consultancy & Networking",
+    description: "Technology strategy and infrastructure guidance aligned to business goals.",
     detail:
-      "We help organisations move to the cloud, modernise their IT infrastructure, and put in place systems that stay reliable as the business grows — with practical, cost-aware guidance.",
-    icon: Cloud,
-    tags: ["AWS", "Google Cloud", "DevOps", "Networking", "IT Support"],
+      "Expert guidance on technology strategy and IT infrastructure decisions, helping clients align technology spend with business objectives.",
+    icon: Network,
+    tags: ["IT Strategy", "Networking", "Infrastructure", "IT Support"],
   },
   {
-    slug: "digital-marketing-design",
-    title: "Digital Marketing & Design",
-    description: "Brand identity, content, and digital campaigns that get noticed.",
+    slug: "digital-marketing-social-media",
+    title: "Digital Marketing & Social Media",
+    description: "Data-informed marketing strategies that grow brand visibility and engagement.",
     detail:
-      "From brand identity to social media campaigns and content strategy, we help businesses show up clearly and consistently online — with design that matches the quality of the product behind it.",
+      "Data-informed digital marketing strategies across web and social platforms, backed by Minga's Professional Diploma in Social Media Marketing & Management, strengthening client brand visibility and customer engagement.",
     icon: Megaphone,
-    tags: ["Branding", "Figma", "SEO", "Social Media", "Content Strategy"],
+    tags: ["Social Media", "Digital Marketing", "Content Strategy", "SEO"],
+  },
+  {
+    slug: "graphic-design-branding-ui-ux",
+    title: "Graphic Design, Branding & UI/UX",
+    description: "Human-centred brand identity and interface design across print and digital.",
+    detail:
+      "Human-centred interface and brand identity design — logos, brand systems, print and digital collateral — backed by 3+ years of brand identity and print design experience.",
+    icon: Palette,
+    tags: ["Branding", "UI/UX", "Figma", "Print Design"],
   },
 ];
