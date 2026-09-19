@@ -28,8 +28,11 @@ export function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wide text-white/80">Services</h4>
             <ul className="mt-4 space-y-3 text-sm text-white/60">
               <li><Link to="/services" className="hover:text-white">Software & Mobile Development</Link></li>
-              <li><Link to="/services" className="hover:text-white">Cloud & IT Consultancy</Link></li>
-              <li><Link to="/services" className="hover:text-white">Digital Marketing & Design</Link></li>
+              <li><Link to="/services" className="hover:text-white">AI-Powered Products</Link></li>
+              <li><Link to="/services" className="hover:text-white">E-commerce & Commerce</Link></li>
+              <li><Link to="/services" className="hover:text-white">IT Consultancy & Networking</Link></li>
+              <li><Link to="/services" className="hover:text-white">Digital Marketing & Social Media</Link></li>
+              <li><Link to="/services" className="hover:text-white">Graphic Design, Branding & UI/UX</Link></li>
             </ul>
           </div>
 

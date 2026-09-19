@@ -10,13 +10,13 @@ export default function Services() {
     <Layout>
       <Seo
         title="Services"
-        description="Software & mobile development, IT consultancy & networking, digital marketing & social media, and graphic design & branding from MindSynk Technologies."
+        description="Software & mobile development, AI-powered products, e-commerce & commerce, IT consultancy & networking, digital marketing & social media, and graphic design & branding from MindSynk Technologies."
       />
 
       <PageHero
         eyebrow="What we do"
         title="Services built for real growth"
-        description="Four disciplines, one partnership — engineering, infrastructure, marketing, and design working together."
+        description="Six disciplines, one partnership — engineering, AI, commerce, infrastructure, marketing, and design working together."
       />
 
       <section className="mx-auto max-w-5xl px-6 py-24">

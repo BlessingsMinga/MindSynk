@@ -19,6 +19,17 @@
 
   html {
     scroll-behavior: smooth;
+
+    /* Hide the native vertical scrollbar (the "scroll side bar").
+       Scrolling still works via wheel, keyboard, and touch. */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Legacy Edge */
+  }
+
+  html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, new Edge */
+    width: 0;
+    height: 0;
   }
 
   body {

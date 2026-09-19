@@ -10,6 +10,7 @@ import { ProcessStep } from "@/components/ProcessStep";
 import { PricingCard } from "@/components/PricingCard";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ContactForm } from "@/components/ContactForm";
+import { Testimonials } from "@/components/Testimonials";
 import { services } from "@/data/services";
 import { processSteps } from "@/data/process";
 import { pricingTiers } from "@/data/pricing";
@@ -21,7 +22,7 @@ export default function Home() {
     <Layout>
       <Seo
         title="Home"
-        description="MindSynk Technologies is a Malawian ICT partnership delivering software & mobile development, cloud & IT consultancy, and digital marketing & design."
+        description="MindSynk Technologies is a Malawian ICT partnership delivering software & mobile development, AI-powered products, e-commerce & commerce, IT consultancy, and digital marketing & design."
       />
 
       <Hero />
@@ -43,7 +44,7 @@ export default function Home() {
             businesses build digital products that last.
           </p>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <ExpertiseCard
               key={service.slug}
@@ -57,6 +58,8 @@ export default function Home() {
       </section>
 
       <CTABand />
+
+      <Testimonials />
 
       {/* Who we are */}
       <section className="mx-auto max-w-7xl px-6 py-24">

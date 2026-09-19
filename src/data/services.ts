@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Code2, Network, Megaphone, Palette } from "lucide-react";
+import { BrainCircuit, Code2, Network, Megaphone, Palette, ShoppingCart } from "lucide-react";
 
 export interface Service {
   slug: string;
@@ -8,6 +8,7 @@ export interface Service {
   detail: string;
   icon: LucideIcon;
   tags: string[];
+  heroLabel?: string;
 }
 
 export const services: Service[] = [
@@ -46,5 +47,25 @@ export const services: Service[] = [
       "Human-centred interface and brand identity design — logos, brand systems, print and digital collateral — backed by 3+ years of brand identity and print design experience.",
     icon: Palette,
     tags: ["Branding", "UI/UX", "Figma", "Print Design"],
+  },
+  {
+    slug: "ai-powered-products",
+    title: "AI-Powered Products",
+    description: "LLM features, automation, and intelligent tools built for real business use cases.",
+    detail:
+      "Practical AI that ships — chat assistants, document Q&A, content automation, and workflow tools powered by large language models. We build RAG pipelines, intelligent search, and automation designed around real local use cases and real connectivity constraints, not demos that stall in production.",
+    icon: BrainCircuit,
+    tags: ["LLMs", "RAG", "Automation", "Prompt Engineering"],
+    heroLabel: "AI",
+  },
+  {
+    slug: "e-commerce-commerce",
+    title: "E-commerce & Commerce",
+    description: "Scalable online stores and payments tuned for the local market.",
+    detail:
+      "Online stores that actually convert — product catalogues, cart and checkout, order management, and payments built around local mobile money (Airtel Money, TNM Mpamba) as well as card payments. Delivered on Shopify, WooCommerce, or a custom stack depending on your ambitions.",
+    icon: ShoppingCart,
+    tags: ["Shopify", "WooCommerce", "Payments", "Mobile money"],
+    heroLabel: "E-commerce",
   },
 ];

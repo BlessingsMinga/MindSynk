@@ -3,9 +3,11 @@ import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
 import { StatCounter } from "@/components/StatCounter";
 import { ProcessStep } from "@/components/ProcessStep";
+import { TeamMemberCard } from "@/components/TeamMemberCard";
 import { CTABand } from "@/components/CTABand";
 import { processSteps } from "@/data/process";
 import { stats } from "@/data/stats";
+import { team } from "@/data/team";
 
 export default function About() {
   return (
@@ -31,16 +33,6 @@ export default function About() {
               cloud expertise, and design under one team, so our clients get a single
               partner instead of juggling multiple vendors.
             </p>
-
-            <div className="mt-8 flex items-center gap-4">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-navy/10 text-lg font-bold text-navy">
-                BM
-              </div>
-              <div>
-                <p className="font-semibold text-navy">Blessings Minga</p>
-                <p className="text-sm text-navy/60">Co-Founder</p>
-              </div>
-            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-8 rounded-2xl border border-navy/10 bg-offwhite p-10">
@@ -48,6 +40,18 @@ export default function About() {
               <StatCounter key={stat.label} value={stat.value} suffix={stat.suffix} label={stat.label} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-24">
+        <div className="text-center">
+          <span className="text-xs font-semibold uppercase tracking-wide text-orange">Meet the team</span>
+          <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">The people behind MindSynk</h2>
+        </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          {team.map((member) => (
+            <TeamMemberCard key={member.name} member={member} />
+          ))}
         </div>
       </section>
 

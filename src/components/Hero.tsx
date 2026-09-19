@@ -5,6 +5,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { TagPill } from "@/components/TagPill";
 import { cn } from "@/lib/utils";
 import { services } from "@/data/services";
+import GradientWaves from "@/components/react-bits/GradientWaves";
 
 export function Hero() {
   return (
@@ -46,7 +47,7 @@ export function Hero() {
           className="mt-8 flex flex-wrap items-center justify-center gap-2"
         >
           {services.map((service) => (
-            <TagPill key={service.slug}>/{service.title.split(" ")[0]}</TagPill>
+            <TagPill key={service.slug}>/{service.heroLabel ?? service.title.split(" ")[0]}</TagPill>
           ))}
         </motion.div>
 
@@ -67,6 +68,32 @@ export function Hero() {
         <p className="mt-8 text-xs font-medium text-navy/40">
           Registered in Malawi · BRN-L5SB7RNK
         </p>
+      </div>
+
+      {/* Animated 3D gradient waves — decorative band in MindSynk brand colours */}
+      <div aria-hidden="true" className="relative h-[440px] overflow-hidden md:h-[520px]">
+        <GradientWaves
+          horizonColor="#1D1E32"
+          waveColor="#F15922"
+          crestColor="#FAFAFA"
+          speed={0.35}
+          amplitude={2.2}
+          waveScale={0.55}
+          waveRatio={0.9}
+          swell={30}
+          turbulence={18}
+          tilt={1.11}
+          zoom={1.0}
+          height={5.0}
+          fogDepth={16}
+          detail="medium"
+          brightness={0.85}
+          opacity={1}
+          mouseInteraction
+          parallaxStrength={0.35}
+          grain
+          grainIntensity={0.04}
+        />
       </div>
     </section>
   );
