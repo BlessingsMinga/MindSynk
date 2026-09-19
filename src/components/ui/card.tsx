@@ -1,16 +1,27 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import BorderGlow from "@/components/react-bits/BorderGlow";
 
 const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
-  ({ className, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={cn(
-        "rounded-2xl border border-navy/10 bg-white shadow-sm",
-        className
-      )}
-      {...props}
-    />
+  ({ className, children, ...props }, ref) => (
+    <BorderGlow
+      className="h-full w-full"
+      backgroundColor="#ffffff"
+      glowColor="220 80 60"
+      colors={["#38bdf8", "#c084fc", "#f472b6"]}
+      borderRadius={16}
+    >
+      <div
+        ref={ref}
+        className={cn(
+          "rounded-2xl border border-navy/10 bg-white shadow-sm",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </div>
+    </BorderGlow>
   )
 );
 Card.displayName = "Card";

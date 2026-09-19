@@ -16,6 +16,7 @@ import { processSteps } from "@/data/process";
 import { pricingTiers } from "@/data/pricing";
 import { portfolioItems } from "@/data/portfolio";
 import { stats } from "@/data/stats";
+import futuristicImage from "@/assets/futuristic.png";
 
 export default function Home() {
   return (
@@ -62,35 +63,52 @@ export default function Home() {
       <Testimonials />
 
       {/* Who we are */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-wide text-orange">Who we are</span>
-            <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">
-              A partnership, not a vendor
-            </h2>
-            <p className="mt-4 text-navy/70">
-              MindSynk Technologies is a Malawian ICT partnership. We work alongside our
-              clients as long-term partners — not a vendor that disappears after launch —
-              combining software development, cloud infrastructure, and digital marketing
-              under one roof.
-            </p>
+      <section className="relative overflow-hidden bg-navy">
+        <img
+          src={futuristicImage}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-50"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/30" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent" />
 
-            <div className="mt-8 flex items-center gap-4">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-navy/10 text-lg font-bold text-navy">
-                BM
-              </div>
-              <div>
-                <p className="font-semibold text-navy">Blessings Minga</p>
-                <p className="text-sm text-navy/60">Co-Founder</p>
+        <div className="relative mx-auto max-w-7xl px-6 py-24">
+          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wide text-orange">Who we are</span>
+              <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
+                A partnership, not a vendor
+              </h2>
+              <p className="mt-4 text-white/70">
+                MindSynk Technologies is a Malawian ICT partnership. We work alongside our
+                clients as long-term partners — not a vendor that disappears after launch —
+                combining software development, cloud infrastructure, and digital marketing
+                under one roof.
+              </p>
+
+              <div className="mt-8 flex items-center gap-4">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white/10 text-lg font-bold text-white">
+                  BM
+                </div>
+                <div>
+                  <p className="font-semibold text-white">Blessings Minga</p>
+                  <p className="text-sm text-white/60">Co-Founder</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="grid grid-cols-2 gap-8 rounded-2xl border border-navy/10 bg-offwhite p-10">
-            {stats.map((stat) => (
-              <StatCounter key={stat.label} value={stat.value} suffix={stat.suffix} label={stat.label} />
-            ))}
+            <div className="grid grid-cols-2 gap-8 rounded-2xl border border-white/10 bg-white/5 p-10 backdrop-blur-sm">
+              {stats.map((stat) => (
+                <StatCounter
+                  key={stat.label}
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  label={stat.label}
+                  variant="onDark"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
