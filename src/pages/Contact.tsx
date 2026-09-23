@@ -31,7 +31,7 @@ export default function Contact() {
               {/* TODO: replace with real MindSynk contact details */}
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-orange" aria-hidden="true" />
-                <a href="tel:+265000000000" className="hover:text-navy">+265 000 000 000</a>
+                <a href="tel:+265992092766" className="hover:text-navy">+265 99 209 2766</a>
               </li>
               {/* TODO: replace with real MindSynk address */}
               <li className="flex items-center gap-3">

@@ -45,7 +45,7 @@ export function Footer() {
               </li>
               {/* TODO: replace with real MindSynk contact details */}
               <li>
-                <a href="tel:+265000000000" className="hover:text-white">+265 000 000 000</a>
+                <a href="tel:+265992092766" className="hover:text-white">+265 99 209 2766</a>
               </li>
               {/* TODO: replace with real MindSynk address */}
               <li>Lilongwe, Malawi</li>

@@ -11,6 +11,7 @@ import { PricingCard } from "@/components/PricingCard";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ContactForm } from "@/components/ContactForm";
 import { Testimonials } from "@/components/Testimonials";
+import { Tech } from "@/components/Tech";
 import { services } from "@/data/services";
 import { processSteps } from "@/data/process";
 import { pricingTiers } from "@/data/pricing";
@@ -115,15 +116,18 @@ export default function Home() {
 
       {/* Our Process */}
       <section className="bg-offwhite">
-        <div className="mx-auto max-w-4xl px-6 py-24">
-          <div className="text-center">
-            <span className="text-xs font-semibold uppercase tracking-wide text-orange">How we work</span>
-            <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">Our Process</h2>
-          </div>
-          <div className="mt-12">
-            {processSteps.map((step) => (
-              <ProcessStep key={step.number} {...step} />
-            ))}
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="lg:sticky lg:top-28 lg:self-start">
+              <span className="text-xs font-semibold uppercase tracking-wide text-orange">How we work</span>
+              <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">Our Process</h2>
+              <Tech className="mx-auto mt-8 aspect-square w-full max-w-xs lg:max-w-md" />
+            </div>
+            <div>
+              {processSteps.map((step) => (
+                <ProcessStep key={step.number} {...step} />
+              ))}
+            </div>
           </div>
         </div>
       </section>

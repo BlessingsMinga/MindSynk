@@ -23,7 +23,7 @@ export function CTABand() {
         </div>
         <p className="mt-6 text-sm text-white/50">
           {/* TODO: replace with real MindSynk contact details */}
-          hello@mindsynk.tech · +265 000 000 000 · Lilongwe, Malawi
+          hello@mindsynk.tech · +265 99 209 2766 · Lilongwe, Malawi
         </p>
       </div>
     </section>
