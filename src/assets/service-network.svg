@@ -1,0 +1,82 @@
+<svg width="720" height="560" viewBox="0 0 720 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">MindSynk service network</title>
+  <desc id="desc">Six service disciplines connected around a central hub</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#33354F"/>
+      <stop offset="100%" stop-color="#1D1E32"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0%" stop-color="#F15922" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#F15922" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F15922" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+    <pattern id="dots" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#FFFFFF" fill-opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="720" height="560" fill="url(#bg)"/>
+  <rect width="720" height="560" fill="url(#dots)"/>
+
+  <!-- glow behind the hub -->
+  <circle cx="360" cy="280" r="220" fill="url(#halo)"/>
+
+  <!-- decorative orbit -->
+  <circle cx="360" cy="280" r="150" stroke="#FFFFFF" stroke-opacity="0.07" stroke-dasharray="3 10"/>
+
+  <!-- spokes: hub to each discipline node -->
+  <g stroke="url(#edge)" stroke-width="2">
+    <line x1="360" y1="280" x2="360" y2="115"/>
+    <line x1="360" y1="280" x2="503" y2="197"/>
+    <line x1="360" y1="280" x2="503" y2="363"/>
+    <line x1="360" y1="280" x2="360" y2="445"/>
+    <line x1="360" y1="280" x2="217" y2="363"/>
+    <line x1="360" y1="280" x2="217" y2="197"/>
+  </g>
+
+  <!-- hexagon ring connecting the six nodes -->
+  <polygon points="360,115 503,197 503,363 360,445 217,363 217,197" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+
+  <!-- discipline nodes -->
+  <g>
+    <circle cx="360" cy="115" r="30" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <circle cx="503" cy="197" r="30" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <circle cx="503" cy="363" r="30" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <circle cx="360" cy="445" r="30" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <circle cx="217" cy="363" r="30" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <circle cx="217" cy="197" r="30" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.14"/>
+  </g>
+
+  <!-- node cores -->
+  <g>
+    <circle cx="360" cy="115" r="20" stroke="#F15922" stroke-opacity="0.25" fill="none"/>
+    <circle cx="503" cy="197" r="20" stroke="#F15922" stroke-opacity="0.25" fill="none"/>
+    <circle cx="503" cy="363" r="20" stroke="#F15922" stroke-opacity="0.25" fill="none"/>
+    <circle cx="360" cy="445" r="20" stroke="#F15922" stroke-opacity="0.25" fill="none"/>
+    <circle cx="217" cy="363" r="20" stroke="#F15922" stroke-opacity="0.25" fill="none"/>
+    <circle cx="217" cy="197" r="20" stroke="#F15922" stroke-opacity="0.25" fill="none"/>
+  </g>
+  <g fill="#F15922">
+    <circle cx="360" cy="115" r="8"/>
+    <circle cx="503" cy="197" r="8"/>
+    <circle cx="503" cy="363" r="8"/>
+    <circle cx="360" cy="445" r="8"/>
+    <circle cx="217" cy="363" r="8"/>
+    <circle cx="217" cy="197" r="8"/>
+  </g>
+
+  <!-- central hub -->
+  <circle cx="360" cy="280" r="48" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.2"/>
+  <circle cx="360" cy="280" r="34" fill="#1D1E32" stroke="#F15922" stroke-opacity="0.9" stroke-width="2"/>
+  <path d="M360,264 L373.86,272 L373.86,288 L360,296 L346.14,288 L346.14,272 Z" fill="none" stroke="#F15922" stroke-opacity="0.75" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- corner accents -->
+  <g stroke="#F15922" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round">
+    <path d="M52 56 L52 76 M42 66 L62 66"/>
+    <path d="M668 484 L668 504 M658 494 L678 494"/>
+  </g>
+</svg>

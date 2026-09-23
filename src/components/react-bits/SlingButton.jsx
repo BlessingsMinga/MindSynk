@@ -25,7 +25,7 @@ const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
 const rubberband = (o, dim, c = 0.55) => (o * dim * c) / (dim + c * Math.abs(o));
 
 export default function SlingButton({
-  children,
+  children = null,
   onSend,
   padColor = '#f5f5f5',
   iconColor = '#18181b',
