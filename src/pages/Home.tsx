@@ -172,7 +172,7 @@ export default function Home() {
       <section className="mx-auto max-w-2xl px-6 py-24">
         <div className="text-center">
           <span className="text-xs font-semibold uppercase tracking-wide text-orange">Get in touch</span>
-          <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">Start a project</h2>
+          <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">Get a quote</h2>
           <p className="mt-4 text-navy/70">
             Tell us a bit about what you&apos;re building and we&apos;ll get back to you.
           </p>

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { BackToTopButton } from "@/components/BackToTopButton";
+import NeonCursor from "@/components/react-bits/NeonCursor";
 import Home from "@/pages/Home";
 import Services from "@/pages/Services";
 import Pricing from "@/pages/Pricing";
@@ -14,6 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <NeonCursor />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />

@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { services } from "@/data/services";
 import heroImage from "@/assets/glasses.jpg";
 import Scanner from "@/components/react-bits/Scanner";
+import TechText from "@/components/react-bits/TechText";
 
 export function Hero() {
   return (
@@ -48,10 +49,26 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl"
+          className="mt-6 font-bold leading-tight text-white"
         >
-          Powering <span className="text-orange">Progress</span> Through
-          <br className="hidden sm:block" /> Technology
+          <span className="sr-only">Powering Progress Through Technology</span>
+          <span aria-hidden="true" className="block">
+            {["Powering Progress", "Through Technology"].map((line) => (
+              <span key={line} className="relative block h-16 w-full sm:h-24 md:h-28">
+                <TechText
+                  text={line}
+                  fontWeight={700}
+                  fontSize={72}
+                  color="#FFFFFF"
+                  accentColor="#F15922"
+                  reveal="letter"
+                  dashLength={4}
+                  dashGap={2}
+                  specks={15}
+                />
+              </span>
+            ))}
+          </span>
         </motion.h1>
 
         <motion.p
@@ -82,7 +99,7 @@ export function Hero() {
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <Link to="/contact" className={cn(buttonVariants({ variant: "solid", size: "lg" }))}>
-            Start a Project <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            Get a Quote <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
           <Link
             to="/work"

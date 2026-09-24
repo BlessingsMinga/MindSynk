@@ -98,6 +98,19 @@ export default function Services() {
                     <TagPill key={tag}>{tag}</TagPill>
                   ))}
                 </div>
+
+                <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-navy/10 pt-5">
+                  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                    <span className="text-xl font-bold text-navy">{service.price}</span>
+                    <span className="text-sm text-navy/60">{service.priceNote}</span>
+                  </div>
+                  <Link
+                    to="/pricing"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-orange hover:underline"
+                  >
+                    See pricing <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                  </Link>
+                </div>
               </div>
             );
           })}

@@ -14,7 +14,7 @@ export function CTABand() {
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link to="/contact" className={cn(buttonVariants({ variant: "solid", size: "lg" }))}>
-            Start a Project →
+            Get a Quote →
           </Link>
           {/* TODO: replace with real MindSynk contact email */}
           <a href="mailto:hello@mindsynk.tech" className="text-sm font-semibold text-white/80 hover:text-white">

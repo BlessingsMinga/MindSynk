@@ -14,7 +14,7 @@ export default function Contact() {
 
       <PageHero
         eyebrow="Get in touch"
-        title="Let's start a project"
+        title="Get a quote"
         description="Tell us about what you're building and we'll get back to you with next steps."
       />
 

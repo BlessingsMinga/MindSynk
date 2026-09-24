@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import GooeyNav from "@/components/react-bits/GooeyNav";
 import logoFull from "@/assets/logo-full.png";
 
 const navLinks = [
@@ -14,6 +15,10 @@ const navLinks = [
 ];
 
 export function Navbar() {
+  const { pathname } = useLocation();
+  const activeIndex = navLinks.findIndex(
+    (link) => pathname === link.to || pathname.startsWith(`${link.to}/`)
+  );
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -46,43 +51,16 @@ export function Navbar() {
           <img src={logoFull} alt="MindSynk Technology" className="h-8 w-auto sm:h-9" />
         </Link>
 
-        <ul className="hidden items-center gap-1 md:flex">
-          {navLinks.map((link) => (
-            <li key={link.to}>
-              <NavLink
-                to={link.to}
-                className={({ isActive }) =>
-                  cn(
-                    "group relative block rounded-full px-4 py-2 text-sm font-medium text-navy/70 transition-colors hover:text-navy",
-                    isActive && "text-navy"
-                  )
-                }
-              >
-                {({ isActive }) => (
-                  <>
-                    <span
-                      className={cn(
-                        "absolute inset-0 rounded-full bg-navy/5 opacity-0 transition-opacity duration-200 group-hover:opacity-100",
-                        isActive && "bg-orange/10 opacity-100 group-hover:opacity-100"
-                      )}
-                    />
-                    <span className="relative">{link.label}</span>
-                    {isActive && (
-                      <span className="absolute inset-x-4 -bottom-0.5 h-0.5 rounded-full bg-orange" />
-                    )}
-                  </>
-                )}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:block">
+          <GooeyNav items={navLinks} activeIndex={activeIndex} />
+        </div>
 
         <div className="hidden items-center md:flex">
           <Link
             to="/contact"
             className={cn(buttonVariants({ variant: "solid", size: "sm" }), "shadow-sm shadow-orange/30")}
           >
-            Start a Project
+            Get a Quote
           </Link>
         </div>
 
@@ -129,7 +107,7 @@ export function Navbar() {
                 onClick={() => setOpen(false)}
                 className={cn(buttonVariants({ variant: "solid", size: "sm" }), "w-full")}
               >
-                Start a Project
+                Get a Quote
               </Link>
             </li>
           </ul>

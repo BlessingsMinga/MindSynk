@@ -9,6 +9,11 @@ export interface Service {
   icon: LucideIcon;
   tags: string[];
   heroLabel?: string;
+  // TODO: replace with real MindSynk pricing guide figures once finalized
+  /** Starting price shown on the service's price tag. */
+  price: string;
+  /** Billing basis for the price, e.g. "one-off" or "per month". */
+  priceNote: string;
 }
 
 export const services: Service[] = [
@@ -20,6 +25,8 @@ export const services: Service[] = [
       "Full-lifecycle design, development, and maintenance of web and mobile applications — from initial concept through deployment and ongoing support. Built on React, Next.js, Python/Django, and Node.js, with mobile delivery capability including offline-first approaches (demonstrated in the MediAlert project) suited to Malawi's variable connectivity.",
     icon: Code2,
     tags: ["React", "Next.js", "Python/Django", "Node.js", "Offline-first"],
+    price: "From MWK 800,000",
+    priceNote: "one-off build",
   },
   {
     slug: "it-consultancy-networking",
@@ -29,6 +36,8 @@ export const services: Service[] = [
       "Expert guidance on technology strategy and IT infrastructure decisions, helping clients align technology spend with business objectives.",
     icon: Network,
     tags: ["IT Strategy", "Networking", "Infrastructure", "IT Support"],
+    price: "From MWK 150,000",
+    priceNote: "per engagement",
   },
   {
     slug: "digital-marketing-social-media",
@@ -38,6 +47,8 @@ export const services: Service[] = [
       "Data-informed digital marketing strategies across web and social platforms, backed by Minga's Professional Diploma in Social Media Marketing & Management, strengthening client brand visibility and customer engagement.",
     icon: Megaphone,
     tags: ["Social Media", "Digital Marketing", "Content Strategy", "SEO"],
+    price: "From MWK 250,000",
+    priceNote: "per month",
   },
   {
     slug: "graphic-design-branding-ui-ux",
@@ -47,6 +58,8 @@ export const services: Service[] = [
       "Human-centred interface and brand identity design — logos, brand systems, print and digital collateral — backed by 3+ years of brand identity and print design experience.",
     icon: Palette,
     tags: ["Branding", "UI/UX", "Figma", "Print Design"],
+    price: "From MWK 400,000",
+    priceNote: "one-off",
   },
   {
     slug: "ai-powered-products",
@@ -56,6 +69,8 @@ export const services: Service[] = [
       "Practical AI that ships — chat assistants, document Q&A, content automation, and workflow tools powered by large language models. We build RAG pipelines, intelligent search, and automation designed around real local use cases and real connectivity constraints, not demos that stall in production.",
     icon: BrainCircuit,
     tags: ["LLMs", "RAG", "Automation", "Prompt Engineering"],
+    price: "From MWK 1,500,000",
+    priceNote: "one-off build",
     heroLabel: "AI",
   },
   {
@@ -66,6 +81,8 @@ export const services: Service[] = [
       "Online stores that actually convert — product catalogues, cart and checkout, order management, and payments built around local mobile money (Airtel Money, TNM Mpamba) as well as card payments. Delivered on Shopify, WooCommerce, or a custom stack depending on your ambitions.",
     icon: ShoppingCart,
     tags: ["Shopify", "WooCommerce", "Payments", "Mobile money"],
+    price: "From MWK 800,000",
+    priceNote: "+ MWK 100,000 /mo",
     heroLabel: "E-commerce",
   },
 ];

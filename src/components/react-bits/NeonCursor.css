@@ -1,0 +1,50 @@
+.neon-cursor-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor-main,
+.cursor-trail,
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.cursor-main {
+  width: 20px;
+  margin: -10px 0 0 -10px;
+  height: 20px;
+  background: rgb(236, 101, 23);
+  box-shadow:
+    0 0 10px rgba(236, 101, 23, 0.8),
+    0 0 20px rgba(236, 101, 23, 0.5);
+}
+
+.cursor-trail {
+  width: 40px;
+  margin: -20px 0 0 -20px;
+  height: 40px;
+  border: 2px solid rgb(236, 101, 23);
+  box-shadow: 0 0 12px rgba(236, 101, 23, 0.4);
+}
+
+.cursor-glow {
+  width: 60px;
+  margin: -30px 0 0 -30px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(236, 101, 23, 0.4) 0%, transparent 70%);
+  opacity: 0.4;
+}
+
+/* Touch devices and users who prefer reduced motion get no custom cursor */
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .neon-cursor-container {
+    display: none;
+  }
+}
