@@ -36,14 +36,27 @@ export function Navbar() {
     };
   }, [open]);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, []);
+
   return (
     <header className="sticky top-0 z-50 px-3 pt-3 sm:px-4">
       <nav
         className={cn(
           "mx-auto flex max-w-6xl items-center justify-between rounded-2xl border transition-all duration-300",
           scrolled
-            ? "h-16 border-navy/10 bg-white/80 px-4 shadow-lg shadow-navy/5 backdrop-blur-xl sm:px-6"
-            : "h-20 border-transparent bg-transparent px-4 sm:px-6"
+            ? "h-16 border-navy/10 bg-white/95 px-4 shadow-lg shadow-navy/5 backdrop-blur-xl sm:px-6"
+            : "h-20 border-navy/10 bg-white/95 px-4 shadow-sm shadow-navy/5 backdrop-blur-xl sm:px-6"
         )}
         aria-label="Main navigation"
       >
@@ -78,6 +91,8 @@ export function Navbar() {
 
       <div
         id="mobile-menu"
+        aria-hidden={!open}
+        inert={!open}
         className={cn(
           "mx-auto grid max-w-6xl overflow-hidden transition-all duration-300 ease-out md:hidden",
           open ? "mt-2 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
