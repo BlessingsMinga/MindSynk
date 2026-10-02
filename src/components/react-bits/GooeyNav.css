@@ -42,18 +42,20 @@
 
 .gooey-nav-container nav ul li:not(.active):hover {
   color: var(--color-navy);
-  background-color: color-mix(in srgb, var(--color-navy) 5%, transparent);
+  background-color: color-mix(in srgb, var(--color-orange) 10%, transparent);
 }
 
 .gooey-nav-container nav ul li a {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: inherit;
+  color: inherit;
+  text-decoration: none;
 }
 
 .gooey-nav-container nav ul li.active {
   color: white;
-  transition-delay: 0.1s;
+  transition: color 0.2s ease;
 }
 
 .gooey-nav-container .effect {
@@ -82,6 +84,13 @@
 
 .gooey-nav-container .effect.active::after {
   animation: gooey-pill 0.3s ease both;
+}
+
+/* Guaranteed solid pill behind the active item, so its white text is always
+   readable even while the gooey ::after layer is animating in. */
+.gooey-nav-container .effect.active {
+  background-color: var(--color-navy);
+  border-radius: 100vw;
 }
 
 @keyframes gooey-pill {

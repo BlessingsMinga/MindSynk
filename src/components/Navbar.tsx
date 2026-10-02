@@ -55,8 +55,8 @@ export function Navbar() {
         className={cn(
           "mx-auto flex max-w-6xl items-center justify-between rounded-2xl border transition-all duration-300",
           scrolled
-            ? "h-16 border-navy/10 bg-white/95 px-4 shadow-lg shadow-navy/5 backdrop-blur-xl sm:px-6"
-            : "h-20 border-navy/10 bg-white/95 px-4 shadow-sm shadow-navy/5 backdrop-blur-xl sm:px-6"
+            ? "h-16 border-navy/10 bg-white/85 px-4 shadow-lg shadow-navy/5 backdrop-blur-xl sm:px-6"
+            : "h-20 border-navy/10 bg-white/85 px-4 shadow-sm shadow-navy/5 backdrop-blur-xl sm:px-6"
         )}
         aria-label="Main navigation"
       >
@@ -108,7 +108,7 @@ export function Navbar() {
                   className={({ isActive }) =>
                     cn(
                       "block rounded-xl px-3 py-2.5 text-base font-medium text-navy/70 transition-colors",
-                      isActive ? "bg-orange/10 text-navy" : "hover:bg-navy/5 hover:text-navy"
+                      isActive ? "bg-orange/10 text-navy" : "hover:bg-orange/10 hover:text-navy"
                     )
                   }
                 >

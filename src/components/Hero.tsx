@@ -11,7 +11,7 @@ import TechText from "@/components/react-bits/TechText";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-navy">
+    <section className="relative -mt-[5.75rem] overflow-hidden bg-navy pt-[5.75rem]">
       <img
         src={heroImage}
         alt=""
