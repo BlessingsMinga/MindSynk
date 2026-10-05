@@ -14,7 +14,7 @@ export const stats: Stat[] = [
   },
   {
     // TODO: replace with real figures
-    value: 3,
+    value: 7,
     suffix: "",
     label: "Core Services",
   },

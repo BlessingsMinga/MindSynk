@@ -1,0 +1,126 @@
+.profile-card-wrap {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  --rotate-x: 0deg;
+  --rotate-y: 0deg;
+  position: relative;
+  perspective: 900px;
+}
+
+.profile-card-wrap::before {
+  position: absolute;
+  inset: 14% 8%;
+  z-index: -1;
+  border-radius: 999px;
+  background: radial-gradient(circle at 50% 50%, rgb(241 89 34 / 30%), transparent 68%);
+  content: "";
+  filter: blur(30px);
+}
+
+.profile-card {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  border: 1px solid rgb(67 177 223 / 35%);
+  border-radius: 1.5rem;
+  background: #101219;
+  box-shadow: 0 24px 50px rgb(4 17 35 / 35%);
+  color: white;
+  isolation: isolate;
+  transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
+  transition: transform 220ms ease-out;
+  transform-style: preserve-3d;
+}
+
+.profile-card__glow,
+.profile-card__texture {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.profile-card__avatar {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 1;
+  filter: contrast(1.04) saturate(.92);
+}
+
+.profile-card__glow {
+  background: linear-gradient(to top, rgb(0 0 0 / 82%) 0%, rgb(0 0 0 / 34%) 28%, transparent 57%), radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgb(52 175 230 / 18%), transparent 36%);
+  mix-blend-mode: normal;
+  z-index: 1;
+}
+
+.profile-card__texture {
+  opacity: .08;
+  background-image: linear-gradient(120deg, transparent 32%, rgb(255 255 255 / 12%) 33%, transparent 34%);
+  background-size: 26px 26px;
+  z-index: 2;
+}
+
+.profile-card__identity {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.profile-card__monogram {
+  display: grid;
+  width: 4.5rem;
+  height: 4.5rem;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 50%;
+  background: rgb(255 255 255 / 10%);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.profile-card__tag,
+.profile-card__eyebrow {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.profile-card__tag { color: rgb(255 255 255 / 65%); }
+.profile-card__eyebrow { color: #ff9a78; }
+
+.profile-card__name-tag {
+  position: absolute;
+  right: 1.75rem;
+  bottom: 1.65rem;
+  left: 1.75rem;
+  z-index: 4;
+  padding: 0 0 .95rem;
+  border: 0;
+  border-bottom: 2px solid #f15922;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 35%);
+  text-align: left;
+}
+
+.profile-card__name-tag h3 { margin: 0; color: white; font-size: clamp(1.45rem, 5vw, 2rem); line-height: 1.1; text-shadow: 0 3px 12px rgb(0 0 0 / 70%); }
+.profile-card__name-tag p { margin: .3rem 0 0; color: rgb(255 255 255 / 76%); font-size: .85rem; font-weight: 600; text-shadow: 0 2px 8px rgb(0 0 0 / 70%); }
+.profile-card__details { position: absolute; inset: 0; z-index: 5; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; background: linear-gradient(to top, rgb(12 14 34 / 96%), rgb(17 24 59 / 82%)); opacity: 0; transform: translateY(12px); transition: opacity 220ms ease, transform 220ms ease; pointer-events: none; }
+.profile-card:hover .profile-card__details, .profile-card:focus-within .profile-card__details { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.profile-card__details .profile-card__tag { color: #aeb7ff; }
+.profile-card__bio { margin: .9rem 0 0; color: rgb(255 255 255 / 82%); font-size: .9rem; line-height: 1.6; }
+.profile-card__linkedin { display: inline-flex; align-items: center; align-self: flex-start; gap: .5rem; margin-top: 1.25rem; padding: .65rem .85rem; border: 1px solid rgb(255 255 255 / 23%); border-radius: .6rem; background: rgb(255 255 255 / 10%); color: white; font-size: .8rem; font-weight: 700; text-decoration: none; transition: background-color 160ms ease, transform 160ms ease; }
+.profile-card__linkedin:hover { background: #0a66c2; transform: translateY(-1px); }
+
+
+@media (prefers-reduced-motion: reduce) { .profile-card { transition: none; transform: none; } }

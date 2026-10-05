@@ -24,7 +24,7 @@ export default function Home() {
     <Layout>
       <Seo
         title="Home"
-        description="MindSynk Technologies is a Malawian ICT partnership delivering software & mobile development, AI-powered products, e-commerce & commerce, IT consultancy, and digital marketing & design."
+        description="MindSynk Technologies is a Malawian ICT partnership delivering software, e-commerce, IT consultancy, cybersecurity awareness training, digital marketing, and design."
       />
 
       <Hero />

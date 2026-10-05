@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { BrainCircuit, Code2, Network, Megaphone, Palette, ShoppingCart } from "lucide-react";
+import { Code2, Network, Megaphone, Palette, ShieldCheck, ShoppingCart } from "lucide-react";
 
 export interface Service {
   slug: string;
@@ -40,6 +40,18 @@ export const services: Service[] = [
     priceNote: "per engagement",
   },
   {
+    slug: "cybersecurity-awareness-training",
+    title: "Cybersecurity Awareness Training",
+    description: "Practical training that helps your team recognise threats and protect your organisation.",
+    detail:
+      "Practical cybersecurity awareness training for teams and organisations, covering phishing, password security, safe data handling, social engineering, and everyday habits that reduce cyber risk.",
+    icon: ShieldCheck,
+    tags: ["Phishing Awareness", "Password Security", "Data Protection", "Cyber Hygiene"],
+    price: "Custom quote",
+    priceNote: "per training",
+    heroLabel: "Cybersecurity",
+  },
+  {
     slug: "digital-marketing-social-media",
     title: "Digital Marketing & Social Media",
     description: "Data-informed marketing strategies that grow brand visibility and engagement.",
@@ -60,18 +72,6 @@ export const services: Service[] = [
     tags: ["Branding", "UI/UX", "Figma", "Print Design"],
     price: "From MWK 400,000",
     priceNote: "one-off",
-  },
-  {
-    slug: "ai-powered-products",
-    title: "AI-Powered Products",
-    description: "LLM features, automation, and intelligent tools built for real business use cases.",
-    detail:
-      "Practical AI that ships — chat assistants, document Q&A, content automation, and workflow tools powered by large language models. We build RAG pipelines, intelligent search, and automation designed around real local use cases and real connectivity constraints, not demos that stall in production.",
-    icon: BrainCircuit,
-    tags: ["LLMs", "RAG", "Automation", "Prompt Engineering"],
-    price: "From MWK 1,500,000",
-    priceNote: "one-off build",
-    heroLabel: "AI",
   },
   {
     slug: "e-commerce-commerce",

@@ -17,10 +17,10 @@ const featuredSlugs = ["software-mobile-development", "graphic-design-branding-u
 const spans: Record<string, string> = {
   "software-mobile-development": "sm:col-span-2 lg:col-span-4",
   "it-consultancy-networking": "lg:col-span-2",
+  "cybersecurity-awareness-training": "lg:col-span-2",
   "digital-marketing-social-media": "lg:col-span-2",
   "graphic-design-branding-ui-ux": "sm:col-span-2 lg:col-span-4",
-  "ai-powered-products": "lg:col-span-3",
-  "e-commerce-commerce": "lg:col-span-3",
+  "e-commerce-commerce": "lg:col-span-6",
 };
 
 const deliveryPoints = [
@@ -43,13 +43,13 @@ export default function Services() {
     <Layout>
       <Seo
         title="Services"
-        description="Software & mobile development, AI-powered products, e-commerce & commerce, IT consultancy & networking, digital marketing & social media, and graphic design & branding from MindSynk Technologies."
+        description="Software & mobile development, e-commerce, IT consultancy, cybersecurity awareness training, digital marketing, and design from MindSynk Technologies."
       />
 
       <PageHero
         eyebrow="What we do"
         title="Services built for real growth"
-        description="Six disciplines, one partnership — engineering, AI, commerce, infrastructure, marketing, and design working together."
+        description="Six disciplines, one partnership — engineering, commerce, infrastructure, cybersecurity, marketing, and design working together."
       />
 
       {/* Services grid */}
@@ -133,7 +133,7 @@ export default function Services() {
               <div className="relative overflow-hidden rounded-3xl border border-navy/10 shadow-2xl shadow-navy/10">
                 <img
                   src={networkImage}
-                  alt="A network diagram showing six service disciplines connected around a central MindSynk hub"
+                  alt="A network diagram showing MindSynk service disciplines connected around a central hub"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -156,8 +156,8 @@ export default function Services() {
                 One team, end to end
               </h2>
               <p className="mt-4 text-navy/70">
-                Whether you need a website, a mobile app, an AI assistant, or a full e-commerce
-                operation, you get the same people from strategy to support. That keeps decisions
+                Whether you need a website, a mobile app, or a full e-commerce operation, you get
+                the same people from strategy to support. That keeps decisions
                 fast, costs predictable, and the product coherent.
               </p>
 
