@@ -1,132 +1,17 @@
-import { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import GooeyNav from "@/components/react-bits/GooeyNav";
+import CardNav, { type CardNavItem } from "@/components/react-bits/CardNav";
 import logoFull from "@/assets/logo-full.png";
 
-const navLinks = [
-  { label: "Services", to: "/services" },
-  { label: "Pricing", to: "/pricing" },
-  { label: "Work", to: "/work" },
-  { label: "About", to: "/about" },
-  { label: "Contact", to: "/contact" },
+const menuItems: CardNavItem[] = [
+  { label: "What we do", links: [{ label: "Services", to: "/services", description: "Digital solutions" }] },
+  { label: "Explore", links: [{ label: "Our work", to: "/work", description: "Selected projects" }, { label: "Pricing", to: "/pricing", description: "Plans and packages" }] },
+  { label: "Meet MindSynk", links: [{ label: "About us", to: "/about", description: "Our story" }, { label: "Contact", to: "/contact", description: "Start a conversation" }] },
 ];
 
 export function Navbar() {
-  const { pathname } = useLocation();
-  const activeIndex = navLinks.findIndex(
-    (link) => pathname === link.to || pathname.startsWith(`${link.to}/`)
-  );
-  const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
-    };
-
-    window.addEventListener("keydown", closeOnEscape);
-    return () => window.removeEventListener("keydown", closeOnEscape);
-  }, []);
-
   return (
-    <header className="sticky top-0 z-50 px-3 pt-3 sm:px-4">
-      <nav
-        className={cn(
-          "mx-auto flex max-w-6xl items-center justify-between rounded-2xl border transition-all duration-300",
-          scrolled
-            ? "h-16 border-navy/10 bg-white/85 px-4 shadow-lg shadow-navy/5 backdrop-blur-xl sm:px-6"
-            : "h-20 border-navy/10 bg-white/85 px-4 shadow-sm shadow-navy/5 backdrop-blur-xl sm:px-6"
-        )}
-        aria-label="Main navigation"
-      >
-        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
-          <img src={logoFull} alt="MindSynk Technology" className="h-8 w-auto sm:h-9" />
-        </Link>
-
-        <div className="hidden md:block">
-          <GooeyNav items={navLinks} activeIndex={activeIndex} />
-        </div>
-
-        <div className="hidden items-center md:flex">
-          <Link
-            to="/contact"
-            className={cn(buttonVariants({ variant: "solid", size: "sm" }), "shadow-sm shadow-orange/30")}
-          >
-            Get a Quote
-          </Link>
-        </div>
-
-        <button
-          type="button"
-          className="inline-flex items-center justify-center rounded-full p-2 text-navy transition-colors hover:bg-navy/5 md:hidden"
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((prev) => !prev)}
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
-      </nav>
-
-      <div
-        id="mobile-menu"
-        aria-hidden={!open}
-        inert={!open}
-        className={cn(
-          "mx-auto grid max-w-6xl overflow-hidden transition-all duration-300 ease-out md:hidden",
-          open ? "mt-2 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-        )}
-      >
-        <div className="overflow-hidden rounded-2xl border border-navy/10 bg-white/95 px-4 py-4 shadow-lg shadow-navy/5 backdrop-blur-xl">
-          <ul className="flex flex-col gap-1">
-            {navLinks.map((link) => (
-              <li key={link.to}>
-                <NavLink
-                  to={link.to}
-                  onClick={() => setOpen(false)}
-                  className={({ isActive }) =>
-                    cn(
-                      "block rounded-xl px-3 py-2.5 text-base font-medium text-navy/70 transition-colors",
-                      isActive ? "bg-orange/10 text-navy" : "hover:bg-orange/10 hover:text-navy"
-                    )
-                  }
-                >
-                  {link.label}
-                </NavLink>
-              </li>
-            ))}
-            <li className="pt-2">
-              <Link
-                to="/contact"
-                onClick={() => setOpen(false)}
-                className={cn(buttonVariants({ variant: "solid", size: "sm" }), "w-full")}
-              >
-                Get a Quote
-              </Link>
-            </li>
-          </ul>
-        </div>
+    <header className="sticky top-0 z-50 h-[76px] px-3 pt-3 sm:px-4">
+      <div className="mx-auto max-w-6xl">
+        <CardNav logo={logoFull} logoAlt="MindSynk Technology" items={menuItems} />
       </div>
     </header>
   );
