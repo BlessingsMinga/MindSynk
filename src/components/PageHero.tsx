@@ -1,4 +1,4 @@
-import heroBackground from "@/assets/glasses.jpg";
+import heroBackground from "@/assets/glasses.webp";
 
 interface PageHeroProps {
   eyebrow: string;
@@ -11,6 +11,7 @@ export function PageHero({ eyebrow, title, description }: PageHeroProps) {
     <section className="relative isolate -mt-[5.75rem] overflow-hidden bg-navy pt-[5.75rem]">
       <img
         src={heroBackground}
+        fetchPriority="high"
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-70"

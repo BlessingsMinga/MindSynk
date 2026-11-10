@@ -11,4 +11,8 @@ export default defineConfig({
       '@': path.resolve(import.meta.dirname, './src'),
     },
   },
+  ssr: {
+    // Bundle dependencies into the prerender build so CJS/UMD packages (e.g. gsap) and CSS imports resolve cleanly.
+    noExternal: true,
+  },
 })

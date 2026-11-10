@@ -1,3 +1,4 @@
+import { lazy } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Seo } from "@/components/Seo";
@@ -9,15 +10,18 @@ import { StatCounter } from "@/components/StatCounter";
 import { ProcessStep } from "@/components/ProcessStep";
 import { PricingCard } from "@/components/PricingCard";
 import { ProjectCard } from "@/components/ProjectCard";
-import { ContactForm } from "@/components/ContactForm";
 import { Testimonials } from "@/components/Testimonials";
-import { Tech } from "@/components/Tech";
+import { DeferUntilVisible } from "@/components/DeferUntilVisible";
 import { services } from "@/data/services";
 import { processSteps } from "@/data/process";
 import { pricingTiers } from "@/data/pricing";
 import { portfolioItems } from "@/data/portfolio";
 import { stats } from "@/data/stats";
-import futuristicImage from "@/assets/futuristic.png";
+import futuristicImage from "@/assets/futuristic.webp";
+
+// Below-the-fold pieces with heavy dependencies (Lottie player, form validation) load on scroll.
+const Tech = lazy(() => import("@/components/Tech").then((m) => ({ default: m.Tech })));
+const ContactForm = lazy(() => import("@/components/ContactForm").then((m) => ({ default: m.ContactForm })));
 
 export default function Home() {
   return (
@@ -67,6 +71,8 @@ export default function Home() {
       <section className="relative overflow-hidden bg-navy">
         <img
           src={futuristicImage}
+          loading="lazy"
+          decoding="async"
           alt=""
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-50"
@@ -121,7 +127,9 @@ export default function Home() {
             <div className="lg:sticky lg:top-28 lg:self-start">
               <span className="text-xs font-semibold uppercase tracking-wide text-orange">How we work</span>
               <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">Our Process</h2>
-              <Tech className="mx-auto mt-8 aspect-square w-full max-w-xs lg:max-w-md" />
+              <DeferUntilVisible className="mx-auto mt-8 aspect-square w-full max-w-xs lg:max-w-md">
+                <Tech className="h-full w-full" />
+              </DeferUntilVisible>
             </div>
             <div>
               {processSteps.map((step) => (
@@ -178,7 +186,9 @@ export default function Home() {
           </p>
         </div>
         <div className="mt-10">
-          <ContactForm />
+          <DeferUntilVisible className="min-h-[26rem]">
+            <ContactForm />
+          </DeferUntilVisible>
         </div>
       </section>
     </Layout>

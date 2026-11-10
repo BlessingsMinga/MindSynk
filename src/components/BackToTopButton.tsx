@@ -11,25 +11,25 @@ const BUBBLE_MS = 6000;
 
 export function BackToTopButton() {
   const [visible, setVisible] = useState(false);
-  const [bubbleOpen, setBubbleOpen] = useState(false);
+  // The welcome bubble shows each time the buttons appear, until it times out or is dismissed
+  const [bubbleExpired, setBubbleExpired] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 400);
+    const onScroll = () => {
+      const pastFold = window.scrollY > 400;
+      setVisible(pastFold);
+      if (!pastFold) setBubbleExpired(false);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Pop the quick message once the buttons appear, then tuck it away after a few seconds
   useEffect(() => {
-    if (!visible || dismissed) {
-      setBubbleOpen(false);
-      return;
-    }
-    setBubbleOpen(true);
-    const timer = setTimeout(() => setBubbleOpen(false), BUBBLE_MS);
+    if (!visible || dismissed) return;
+    const timer = setTimeout(() => setBubbleExpired(true), BUBBLE_MS);
     return () => clearTimeout(timer);
   }, [visible, dismissed]);
 
@@ -37,7 +37,7 @@ export function BackToTopButton() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  const showBubble = visible && (bubbleOpen || hovered);
+  const showBubble = visible && ((!dismissed && !bubbleExpired) || hovered);
 
   return (
     <div

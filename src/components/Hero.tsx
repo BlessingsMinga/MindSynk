@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
-import { buttonVariants } from "@/components/ui/button";
+import { motion } from "motion/react";
+import { buttonVariants } from "@/components/ui/button-variants";
 import { TagPill } from "@/components/TagPill";
 import { cn } from "@/lib/utils";
 import { services } from "@/data/services";
-import heroImage from "@/assets/glasses.jpg";
+import heroImage from "@/assets/glasses.webp";
 import Scanner from "@/components/react-bits/Scanner";
 import TechText from "@/components/react-bits/TechText";
 
@@ -14,6 +14,7 @@ export function Hero() {
     <section className="relative -mt-[5.75rem] overflow-hidden bg-navy pt-[5.75rem]">
       <img
         src={heroImage}
+        fetchPriority="high"
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[80%_20%] opacity-60"

@@ -66,7 +66,7 @@ export default function ProfileCard({
       >
         <div className="profile-card__glow" />
         <div className="profile-card__texture" />
-        {avatarUrl && <img className="profile-card__avatar" src={avatarUrl} alt={`Portrait of ${name}`} style={{ objectPosition: avatarPosition }} />}
+        {avatarUrl && <img className="profile-card__avatar" src={avatarUrl} loading="lazy" decoding="async" alt={`Portrait of ${name}`} style={{ objectPosition: avatarPosition }} />}
         <div className="profile-card__details" aria-label={`More information about ${name}`}>
           <span className="profile-card__tag">@{handle}</span>
           <p className="profile-card__bio">{bio}</p>

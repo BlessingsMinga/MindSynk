@@ -5,7 +5,7 @@ import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
 import { TagPill } from "@/components/TagPill";
 import { CTABand } from "@/components/CTABand";
-import { buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button-variants";
 import { cn } from "@/lib/utils";
 import { services } from "@/data/services";
 import networkImage from "@/assets/service-network.svg";

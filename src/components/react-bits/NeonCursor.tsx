@@ -1,6 +1,3 @@
-// @ts-nocheck
-'use client';
-
 import { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'motion/react';
 import './NeonCursor.css';
@@ -26,14 +23,14 @@ const NeonCursor = () => {
   const [isClicking, setIsClicking] = useState(false);
 
   useEffect(() => {
-    const handleMove = (e) => {
+    const handleMove = (e: PointerEvent) => {
       x.set(e.clientX);
       y.set(e.clientY);
       setInWindow(true);
     };
     // pointerover fires on every element entered, so it covers both entering and leaving targets.
-    const handleOver = (e) => {
-      setIsHovering(!!e.target.closest?.(INTERACTIVE));
+    const handleOver = (e: PointerEvent) => {
+      setIsHovering(e.target instanceof Element && !!e.target.closest(INTERACTIVE));
     };
     const handleDown = () => setIsClicking(true);
     const handleUp = () => setIsClicking(false);

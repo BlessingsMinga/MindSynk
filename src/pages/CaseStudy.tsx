@@ -1,10 +1,11 @@
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import NotFound from "@/pages/NotFound";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { Layout } from "@/components/Layout";
 import { CTABand } from "@/components/CTABand";
 import { TagPill } from "@/components/TagPill";
-import { buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button-variants";
 import { getPortfolioItem } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
@@ -13,7 +14,7 @@ export default function CaseStudy() {
   const project = slug ? getPortfolioItem(slug) : undefined;
 
   if (!project) {
-    return <Navigate to="/work" replace />;
+    return <NotFound />;
   }
 
   return (
