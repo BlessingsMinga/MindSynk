@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { MessageCircle, X } from "lucide-react";
 import SlingButton from "@/components/react-bits/SlingButton";
 
@@ -14,6 +15,7 @@ export function BackToTopButton() {
   const [bubbleExpired, setBubbleExpired] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const onScroll = () => {
@@ -38,9 +40,12 @@ export function BackToTopButton() {
 
   const showBubble = visible && ((!dismissed && !bubbleExpired) || hovered);
 
+  // The contact page already has its own form and WhatsApp link, so the floating widgets only get in the way there.
+  if (pathname === "/contact") return null;
+
   return (
     <div
-      className={`fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3 transition-all duration-300 ${
+      className={`fixed bottom-4 right-4 z-50 flex flex-col items-center gap-2 sm:bottom-6 sm:right-6 sm:gap-3 transition-all duration-300 ${
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >
@@ -51,7 +56,7 @@ export function BackToTopButton() {
       >
         <div
           role="status"
-          className={`absolute bottom-2 right-full mr-3 w-60 origin-bottom-right rounded-2xl rounded-br-sm bg-white p-4 pr-8 text-sm text-navy shadow-xl shadow-black/10 ring-1 ring-navy/10 transition-all duration-200 ${
+          className={`absolute bottom-2 right-full mr-3 hidden w-60 origin-bottom-right sm:block rounded-2xl rounded-br-sm bg-white p-4 pr-8 text-sm text-navy shadow-xl shadow-black/10 ring-1 ring-navy/10 transition-all duration-200 ${
             showBubble ? "scale-100 opacity-100" : "pointer-events-none scale-90 opacity-0"
           }`}
         >
@@ -84,7 +89,7 @@ export function BackToTopButton() {
           aria-label="Chat with us on WhatsApp"
           className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
         >
-          <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-[#25D366]/40" />
+          <span className="absolute inset-0 -z-10 hidden animate-ping rounded-full bg-[#25D366]/40 sm:block" />
           <MessageCircle size={28} strokeWidth={1.8} />
         </a>
       </div>

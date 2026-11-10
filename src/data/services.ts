@@ -25,7 +25,7 @@ export const services: Service[] = [
       "Full-lifecycle design, development, and maintenance of web and mobile applications — from initial concept through deployment and ongoing support. Built on React, Next.js, Python/Django, and Node.js, with mobile delivery capability including offline-first approaches (demonstrated in the MediAlert project) suited to Malawi's variable connectivity.",
     icon: Code2,
     tags: ["React", "Next.js", "Python/Django", "Node.js", "Offline-first"],
-    price: "From MWK 800,000",
+    price: "From MWK 450,000",
     priceNote: "one-off build",
   },
   {
@@ -59,7 +59,7 @@ export const services: Service[] = [
       "Data-informed digital marketing strategies across web and social platforms, backed by Minga's Professional Diploma in Social Media Marketing & Management, strengthening client brand visibility and customer engagement.",
     icon: Megaphone,
     tags: ["Social Media", "Digital Marketing", "Content Strategy", "SEO"],
-    price: "From MWK 250,000",
+    price: "From MWK 180,000",
     priceNote: "per month",
   },
   {
@@ -70,7 +70,7 @@ export const services: Service[] = [
       "Human-centred interface and brand identity design — logos, brand systems, print and digital collateral — backed by 3+ years of brand identity and print design experience.",
     icon: Palette,
     tags: ["Branding", "UI/UX", "Figma", "Print Design"],
-    price: "From MWK 400,000",
+    price: "From MWK 250,000",
     priceNote: "one-off",
   },
   {
@@ -82,7 +82,7 @@ export const services: Service[] = [
     icon: ShoppingCart,
     tags: ["Shopify", "WooCommerce", "Payments", "Mobile money"],
     price: "From MWK 800,000",
-    priceNote: "+ MWK 100,000 /mo",
+    priceNote: "+ MWK 60,000 /mo",
     heroLabel: "E-commerce",
   },
 ];

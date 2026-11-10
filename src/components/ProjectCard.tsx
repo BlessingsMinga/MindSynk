@@ -25,7 +25,7 @@ export function ProjectCard({ project }: { project: PortfolioItem }) {
         </div>
         <Link
           to={`/work/${project.slug}`}
-          className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-orange hover:underline"
+          className="mt-4 -my-3 inline-flex min-h-11 items-center gap-1 py-3 text-sm font-semibold text-orange hover:underline"
         >
           View Project <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </Link>

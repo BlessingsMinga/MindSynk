@@ -17,7 +17,7 @@ export function PageHero({ eyebrow, title, description }: PageHeroProps) {
         className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-70"
       />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/90" />
-      <div className="relative mx-auto max-w-5xl px-6 py-20 text-center sm:py-28">
+      <div className="relative mx-auto max-w-5xl px-6 py-20 text-center sm:py-32">
         <span className="inline-block rounded-full border border-orange/30 bg-orange/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-orange">
           {eyebrow}
         </span>

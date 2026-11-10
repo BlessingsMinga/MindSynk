@@ -41,7 +41,7 @@ export default function Home() {
       </div>
 
       {/* Our Expertise */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-16 sm:py-24">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-semibold uppercase tracking-wide text-orange">What we do</span>
           <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">Our Expertise</h2>
@@ -80,7 +80,7 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/30" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-24">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 sm:py-24">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
             <div>
               <span className="text-xs font-semibold uppercase tracking-wide text-orange">Who we are</span>
@@ -122,7 +122,7 @@ export default function Home() {
 
       {/* Our Process */}
       <section className="bg-offwhite">
-        <div className="mx-auto max-w-7xl px-6 py-24">
+        <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <span className="text-xs font-semibold uppercase tracking-wide text-orange">How we work</span>
@@ -141,7 +141,7 @@ export default function Home() {
       </section>
 
       {/* Pricing preview */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-16 sm:py-24">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-semibold uppercase tracking-wide text-orange">Pricing</span>
           <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">Packages built for growth</h2>
@@ -154,7 +154,7 @@ export default function Home() {
         <div className="mt-10 text-center">
           <Link
             to="/pricing"
-            className="inline-flex items-center gap-1 text-sm font-semibold text-orange hover:underline"
+            className="-my-3 inline-flex min-h-11 items-center gap-1 py-3 text-sm font-semibold text-orange hover:underline"
           >
             Compare all packages <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
@@ -163,7 +163,7 @@ export default function Home() {
 
       {/* Portfolio preview */}
       <section className="bg-offwhite">
-        <div className="mx-auto max-w-7xl px-6 py-24">
+        <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-xs font-semibold uppercase tracking-wide text-orange">Our work</span>
             <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">Recent projects</h2>
@@ -177,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="mx-auto max-w-2xl px-6 py-24">
+      <section className="mx-auto max-w-2xl px-6 py-16 sm:py-24">
         <div className="text-center">
           <span className="text-xs font-semibold uppercase tracking-wide text-orange">Get in touch</span>
           <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">Get a quote</h2>

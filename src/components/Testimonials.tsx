@@ -4,7 +4,7 @@ import { testimonials } from "@/data/testimonials";
 
 export function Testimonials() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section className="mx-auto max-w-7xl px-6 py-16 sm:py-24">
       <div className="mx-auto max-w-2xl text-center">
         <span className="text-xs font-semibold uppercase tracking-wide text-orange">
           What clients say

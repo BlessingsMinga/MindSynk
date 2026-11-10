@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 export function CTABand() {
   return (
     <section className="bg-navy">
-      <div className="mx-auto max-w-5xl px-6 py-20 text-center">
+      <div className="mx-auto max-w-5xl px-6 py-16 text-center sm:py-24">
         <h2 className="text-3xl font-bold text-white sm:text-4xl">
           Ready to build something that lasts?
         </h2>

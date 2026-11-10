@@ -25,10 +25,10 @@ export default function CaseStudy() {
       />
 
       <section className="bg-offwhite">
-        <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
           <Link
             to="/work"
-            className="inline-flex items-center gap-1 text-sm font-semibold text-navy/60 hover:text-navy"
+            className="-my-3 inline-flex min-h-11 items-center gap-1 py-3 text-sm font-semibold text-navy/60 hover:text-navy"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Back to work
           </Link>
@@ -55,7 +55,7 @@ export default function CaseStudy() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-20">
+      <section className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
         <div className="grid gap-16">
           <div>
             <h2 className="text-2xl font-bold text-navy">The problem</h2>

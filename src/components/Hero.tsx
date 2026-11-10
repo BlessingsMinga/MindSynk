@@ -36,7 +36,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/20" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent" />
 
-      <div className="relative mx-auto max-w-5xl px-6 py-24 text-center sm:py-32">
+      <div className="relative mx-auto max-w-5xl px-6 py-20 text-center sm:py-32">
         <motion.span
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

@@ -16,36 +16,36 @@ export function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wide text-white/80">Explore</h4>
-            <ul className="mt-4 space-y-3 text-sm text-white/60">
-              <li><Link to="/about" className="hover:text-white">About</Link></li>
-              <li><Link to="/work" className="hover:text-white">Work</Link></li>
-              <li><Link to="/pricing" className="hover:text-white">Pricing</Link></li>
-              <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+            <ul className="mt-2 space-y-0 text-sm text-white/60">
+              <li><Link to="/about" className="inline-block py-2 hover:text-white">About</Link></li>
+              <li><Link to="/work" className="inline-block py-2 hover:text-white">Work</Link></li>
+              <li><Link to="/pricing" className="inline-block py-2 hover:text-white">Pricing</Link></li>
+              <li><Link to="/contact" className="inline-block py-2 hover:text-white">Contact</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wide text-white/80">Services</h4>
-            <ul className="mt-4 space-y-3 text-sm text-white/60">
-              <li><Link to="/services" className="hover:text-white">Software & Mobile Development</Link></li>
-              <li><Link to="/services" className="hover:text-white">E-commerce & Commerce</Link></li>
-              <li><Link to="/services" className="hover:text-white">IT Consultancy & Networking</Link></li>
-              <li><Link to="/services" className="hover:text-white">Cybersecurity Awareness Training</Link></li>
-              <li><Link to="/services" className="hover:text-white">Digital Marketing & Social Media</Link></li>
-              <li><Link to="/services" className="hover:text-white">Graphic Design, Branding & UI/UX</Link></li>
+            <ul className="mt-2 space-y-0 text-sm text-white/60">
+              <li><Link to="/services" className="inline-block py-2 hover:text-white">Software & Mobile Development</Link></li>
+              <li><Link to="/services" className="inline-block py-2 hover:text-white">E-commerce & Commerce</Link></li>
+              <li><Link to="/services" className="inline-block py-2 hover:text-white">IT Consultancy & Networking</Link></li>
+              <li><Link to="/services" className="inline-block py-2 hover:text-white">Cybersecurity Awareness Training</Link></li>
+              <li><Link to="/services" className="inline-block py-2 hover:text-white">Digital Marketing & Social Media</Link></li>
+              <li><Link to="/services" className="inline-block py-2 hover:text-white">Graphic Design, Branding & UI/UX</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wide text-white/80">Get in touch</h4>
-            <ul className="mt-4 space-y-3 text-sm text-white/60">
+            <ul className="mt-2 space-y-0 text-sm text-white/60">
               {/* TODO: replace with real MindSynk contact details */}
               <li>
-                <a href="mailto:hello@mindsynk.tech" className="hover:text-white">hello@mindsynk.tech</a>
+                <a href="mailto:hello@mindsynk.tech" className="inline-block py-2 hover:text-white">hello@mindsynk.tech</a>
               </li>
               {/* TODO: replace with real MindSynk contact details */}
               <li>
-                <a href="tel:+265992092766" className="hover:text-white">+265 99 209 2766</a>
+                <a href="tel:+265992092766" className="inline-block py-2 hover:text-white">+265 99 209 2766</a>
               </li>
               {/* TODO: replace with real MindSynk address */}
               <li>Lilongwe, Malawi</li>

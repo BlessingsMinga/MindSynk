@@ -63,7 +63,7 @@ export default function About() {
       />
 
       {/* Our story */}
-      <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+      <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
           <div>
             <Eyebrow>Our story</Eyebrow>
@@ -122,7 +122,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="bg-offwhite py-20 sm:py-28">
+      <section className="bg-offwhite py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <Eyebrow>What guides us</Eyebrow>
@@ -146,7 +146,7 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+      <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
           <div>
             <Eyebrow>Our team</Eyebrow>
@@ -174,7 +174,7 @@ export default function About() {
       </section>
 
       {/* Process */}
-      <section className="bg-offwhite py-20 sm:py-28">
+      <section className="bg-offwhite py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
             <div>
