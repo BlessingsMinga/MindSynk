@@ -7,8 +7,7 @@ import {
   useMotionValueEvent,
   useReducedMotion
 } from 'motion/react';
-import { HugeiconsIcon } from '@hugeicons/react';
-import { ArrowUp02Icon } from '@hugeicons/core-free-icons';
+import { ArrowUp } from 'lucide-react';
 
 import './SlingButton.css';
 
@@ -378,7 +377,7 @@ export default function SlingButton({
         >
           <span className="sling-button__face">
             <span ref={iconRef} className="sling-button__icon">
-              {children ?? <HugeiconsIcon icon={ArrowUp02Icon} size={Math.round(size * 0.4)} strokeWidth={2.2} />}
+              {children ?? <ArrowUp size={Math.round(size * 0.4)} strokeWidth={2.2} />}
             </span>
           </span>
         </button>

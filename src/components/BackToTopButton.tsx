@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { Cancel01Icon, WhatsappIcon } from "@hugeicons/core-free-icons";
+import { MessageCircle, X } from "lucide-react";
 import SlingButton from "@/components/react-bits/SlingButton";
 
 const WHATSAPP_NUMBER = "265992092766";
@@ -65,7 +64,7 @@ export function BackToTopButton() {
             aria-label="Dismiss message"
             className="absolute right-2 top-2 rounded-full p-1 text-navy/50 transition-colors hover:bg-navy/5 hover:text-navy"
           >
-            <HugeiconsIcon icon={Cancel01Icon} size={14} />
+            <X size={14} />
           </button>
           <p className="font-semibold">Hi there 👋</p>
           <p className="mt-1 text-navy/70">Have a project in mind? Chat with us on WhatsApp.</p>
@@ -86,7 +85,7 @@ export function BackToTopButton() {
           className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
         >
           <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-[#25D366]/40" />
-          <HugeiconsIcon icon={WhatsappIcon} size={28} strokeWidth={1.8} />
+          <MessageCircle size={28} strokeWidth={1.8} />
         </a>
       </div>
       <SlingButton

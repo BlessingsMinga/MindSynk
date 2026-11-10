@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef } from "react";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { Linkedin01Icon } from "@hugeicons/core-free-icons";
+import { Globe } from "lucide-react";
 import "./ProfileCard.css";
 
 interface ProfileCardProps {
@@ -70,7 +69,7 @@ export default function ProfileCard({
         <div className="profile-card__details" aria-label={`More information about ${name}`}>
           <span className="profile-card__tag">@{handle}</span>
           <p className="profile-card__bio">{bio}</p>
-          {linkedinUrl && <a className="profile-card__linkedin" href={linkedinUrl} target="_blank" rel="noreferrer" aria-label={`${name} on LinkedIn`}><HugeiconsIcon icon={Linkedin01Icon} size={20} aria-hidden="true" /><span>LinkedIn</span></a>}
+          {linkedinUrl && <a className="profile-card__linkedin" href={linkedinUrl} target="_blank" rel="noreferrer" aria-label={`${name} on LinkedIn`}><Globe size={20} aria-hidden="true" /><span>LinkedIn</span></a>}
         </div>
         <div className="profile-card__name-tag">
           <h3>{name}</h3>
